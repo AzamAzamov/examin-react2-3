@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "name": "Jacob Jones",
+      "email": "jackson.graham@example.com",
+      "img": "./src/assets/Avatar.png",
+      "city": "Dushanbe",
+      "status": false,
+      "phone": "88888 0090",
+      "id": "2"
+    },
+    {
+      "name": "Jacob Jones",
+      "email": "jackson.graham@example.com",
+      "img": "./src/assets/img1.png",
+      "city": "Dushanbe",
+      "status": true,
+      "phone": "88888 0090",
+      "id": "3"
+    },
+    {
+      "name": "Jacob Jones",
+      "email": "jackson.graham@example.com",
+      "img": "./src/assets/Avatar.png",
+      "city": "Dushanbe",
+      "status": false,
+      "phone": "88888 0090",
+      "id": "4"
+    },
+    {
+      "name": "Jacob Jones",
+      "email": "jackson.graham@example.com",
+      "img": "./src/assets/Avatar.png",
+      "city": "Dushanbe",
+      "status": false,
+      "phone": "88888 0090",
+      "id": "5"
+    },
+    {
+      "name": "Jacob Jones",
+      "email": "jackson.graham@example.com",
+      "img": "./src/assets/Avatar.png",
+      "city": "Dushanbe",
+      "status": false,
+      "phone": "88888 0090",
+      "id": "6"
+    },
+    {
+      "name": "Jacob Jones",
+      "email": "jackson.graham@example.com",
+      "img": "./src/assets/Avatar.png",
+      "city": "Dushanbe",
+      "status": false,
+      "phone": "88888 0090",
+      "id": "7"
+    },
+    {
+      "name": "Jacob Jones",
+      "email": "jackson.graham@example.com",
+      "img": "./src/assets/Avatar.png",
+      "city": "Dushanbe",
+      "status": false,
+      "phone": "88888 0090",
+      "id": "8"
+    }
+  ]
+}
