@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.addBtn{
+  width: 100px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #2196F3;
+  color: white;
+  border: 0;
+}
