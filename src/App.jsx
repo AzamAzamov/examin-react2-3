@@ -8,17 +8,21 @@ export default function App() {
 
   const [open, setOpen] = useState(false);
   const [openEdit, setOpenEdit] = useState(false);
-  const [editUserData, setEditUserData] = useState(null);
-  const [theme, setTheme] = useState("light");
-  const [searchTerm, setSearchTerm] = useState("");
+
+  const [editUserData, setEditUserData] = useState(null)
+  const [theme, setTheme] = useState("light")
+  const [searchTerm , setSearchTerm]=useState("")
+
 
   useEffect(() => {
     get();
   }, []);
 
   useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
+    document.body.className = theme
+  }, [theme])
+
+
 
   async function get() {
     try {
@@ -39,19 +43,19 @@ export default function App() {
   }
 
   function handleAdd() {
-    setEditUserData(null);
+    setEditUserData(null)
     setOpen(true);
   }
 
   function handleEdit(user) {
-    setEditUserData(user);
-    setOpenEdit(true);
+    setEditUserData(user)
+    setOpenEdit(true)
   }
 
   async function addUser(newUser) {
     try {
-      await axios.post(API, newUser);
-      get();
+      await axios.post(API, newUser)
+       get()
     } catch (error) {
       console.log(error);
     }
@@ -59,8 +63,8 @@ export default function App() {
 
   async function editUser(id, updateUser) {
     try {
-      await axios.put(`${API}/${id}`, updateUser);
-      get();
+      await axios.put(`${API}/${id}`, updateUser)
+     get()
     } catch (error) {
       console.log(error);
     }
@@ -68,41 +72,42 @@ export default function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const form = e.target;
     const newUser = {
-      name: form["Name"].value,
-      email: form["Email"].value,
-      phone: form["Phone"].value,
-      city: form["City"].value,
-      status: form["Status"].value,
-      img: form["Avatar"].value,
+      name: e.target["Name"].value,
+      email: e.target["Email"].value,
+      phone: e.target["Phone"].value,
+      city: e.target["City"].value,
+      status: e.target["Status"].value == true ? "Active" : "Inactive",
+      img: e.target["Avatar"].value,
     };
 
     if (editUserData) {
-      await editUser(editUserData.id, newUser);
-      setOpenEdit(false);
-    } else {
-      await addUser(newUser);
-      setOpen(false);
+      await editUser(editUserData.id, newUser)
     }
-
-    form.reset();
-    setEditUserData(null);
+    else {
+      await addUser(newUser)
+    }
+    form.reset()
+    setOpen(false)
+    setEditUserData(null)
   };
 
-  const filteredUsers = users.filter((user) => {
+  const filteredUsers = users.filter((user)=>{
     const search = searchTerm.toLowerCase();
-    return (
-      user.name.toLowerCase().includes(search) ||
-      user.email.toLowerCase().includes(search) ||
+    return(
+      user.name.toLowerCase().includes(search)||
+      user.email.toLowerCase().includes(search)||
       user.city.toLowerCase().includes(search)
-    );
-  });
+    )
+  })
+
 
   return (
     <>
 
-      {open && (
+
+
+           {open && (
         <dialog open>
           <form className='form' onSubmit={handleSubmit}>
             <h2>Добавить пользователя</h2>
@@ -144,30 +149,40 @@ export default function App() {
         </dialog>
       )}
 
+
       <header>
         <div className='header'>
-          <h1>User List</h1>
-          <div style={{ display: "flex", gap: "20px" }}>
-            <button className='addBtn' onClick={handleAdd}>+ADD</button>
-            <div className="dark_light">
-              <button className="toggle-btn" onClick={() => setTheme("light")}>☀️ Light Mode</button>
-              <button className="toggle-btn" onClick={() => setTheme("dark")}>🌙 Dark Mode</button>
-            </div>
+
+        <h1>User List</h1>
+        <div style={{ display: "flex", gap: "20px" }}>
+
+          <button className='addBtn' onClick={handleAdd}>+ADD</button>
+         
+
+        
+          <div className="dark_light">
+            <button className="toggle-btn" onClick={() => setTheme("light")}>☀️ Light Mode</button>
+            <button className="toggle-btn" onClick={() => setTheme("dark")}>🌙 Dark Mode</button>
           </div>
+
+        </div>
         </div>
 
+
         <div className='search_select'>
+
+
           <div className='select'>
-            <p style={{ color: "gray" }}>Status</p>
+            <p style={{color:"gray"}}>Status</p>
             <select name="" id="">
               <option value="all">All</option>
-              <option value="Active">Active</option>
-              <option value="Inactive">Inactive</option>
+              <option value="true">Active</option>
+              <option value="false">Inactive</option>
             </select>
           </div>
           <div className='search'>
             <p>Search</p>
-            <input type="text" placeholder='Search...' onChange={(e) => setSearchTerm(e.target.value)} />
+            <input type="text" placeholder='Search...' onChange={(e)=> setSearchTerm(e.target.value)} />
           </div>
         </div>
       </header>
@@ -195,10 +210,12 @@ export default function App() {
               </td>
               <td>{el.phone}</td>
               <td>{el.city}</td>
-              <td>{el.status}</td>
+              <td>{el.status == true ? "Active" : "Inactive"}</td>
+
               <td>
                 <button onClick={() => deleteUser(el.id)}>dele</button>
                 <button onClick={() => handleEdit(el)}>edit</button>
+                {/* <button>dele</button> */}
               </td>
             </tr>
           ))}
@@ -207,3 +224,4 @@ export default function App() {
     </>
   );
 }
+

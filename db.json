@@ -1,15 +1,6 @@
 {
   "data": [
     {
-      "name": "Jacob Jones",
-      "email": "jackson.graham@example.com",
-      "phone": "88888 0090e3eewedd",
-      "city": "Dushanbe",
-      "status": "Inactive",
-      "img": "./src/assets/Avatar.png",
-      "id": "4"
-    },
-    {
       "name": "Maga bini",
       "email": "azamazamov318@gmail.com",
       "phone": "9952225",
@@ -37,13 +28,22 @@
       "img": ""
     },
     {
-      "name": "Jacob azamукаа",
+      "name": "Azamwede",
       "email": "azamazamov318@gmail.com",
       "phone": "9952225",
       "city": "wlednkowe",
-      "status": "Active",
-      "img": "",
-      "id": "fa8e"
+      "status": "Inactive",
+      "img": "pwmfperwfmre",
+      "id": "23de"
+    },
+    {
+      "id": "cf06",
+      "name": "Azam",
+      "email": "azamazamov318@gmail.com",
+      "phone": "9952225",
+      "city": "wlednkowe",
+      "status": "Inactive",
+      "img": "pwmfperwfmre"
     }
   ]
 }
