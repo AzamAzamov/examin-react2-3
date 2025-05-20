@@ -3,20 +3,47 @@
     {
       "name": "Jacob Jones",
       "email": "jackson.graham@example.com",
-      "img": "./src/assets/img1.png",
+      "phone": "88888 0090e3eewedd",
       "city": "Dushanbe",
-      "status": true,
-      "phone": "88888 0090",
-      "id": "3"
+      "status": "Inactive",
+      "img": "./src/assets/Avatar.png",
+      "id": "4"
     },
     {
-      "name": "Jacob Jones",
-      "email": "jackson.graham@example.com",
-      "img": "./src/assets/Avatar.png",
-      "city": "Dushanbe",
-      "status": false,
-      "phone": "88888 0090",
-      "id": "4"
+      "name": "Maga bini",
+      "email": "azamazamov318@gmail.com",
+      "phone": "9952225",
+      "city": "wlednkowe",
+      "status": "Inactive",
+      "img": "pwmfperwfmre",
+      "id": "0429"
+    },
+    {
+      "id": "925c",
+      "name": "Azam",
+      "email": "azamazamov318@gmail.com",
+      "phone": "9952225",
+      "city": "wlednkowe",
+      "status": "Inactive",
+      "img": "pwmfperwfmre"
+    },
+    {
+      "id": "682d",
+      "name": "Jacob azam",
+      "email": "azamazamov318@gmail.com",
+      "phone": "9952225",
+      "city": "wlednkowe",
+      "status": "Inactive",
+      "img": ""
+    },
+    {
+      "name": "Jacob azamукаа",
+      "email": "azamazamov318@gmail.com",
+      "phone": "9952225",
+      "city": "wlednkowe",
+      "status": "Active",
+      "img": "",
+      "id": "fa8e"
     }
   ]
 }

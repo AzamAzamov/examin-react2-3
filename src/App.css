@@ -45,8 +45,95 @@
 .addBtn{
   width: 100px;
   height: 42px;
-  border-radius: 10px;
+  border-radius: 4px;
   background-color: #2196F3;
   color: white;
   border: 0;
+}
+
+.dark_light button{
+  width: 117px;
+  height: 42px;
+  border: 1px solid black;
+  border-radius: 4px;
+
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Светлая тема — по умолчанию */
+body.light {
+  background-color: #fff;
+  color: #333;
+}
+
+ 
+body.dark {
+  background-color: #333;
+  color: #f1f1f1;
+}
+
+ 
+.toggle-btn {
+
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #888;
+  color: white;
+}
+
+
+.select select{
+  width:250px;
+  height: 56px;
+}
+.select p{
+  display: flex;
+  justify-content: start;
+  /* margin-top: 30px; */
+  /* margin-bottom: -10px; */
+  position: absolute;
+  top: 93px;
+  left: 240px;
+}
+.select{
+  width: 250px;
+}
+
+.search input{
+  width: 250px;
+  height: 50px;
+
+}
+.search p{
+  color: gray;
+  position: absolute;
+  top: 95px;
+  right:380px;
+}
+
+.search_select{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.form{
+  width: 400px;
+
+}
+.form input {
+  width: 400px;
+  height: 50px;
+
+}
+.form select{
+  width: 410px;
+  height: 40px;
 }
